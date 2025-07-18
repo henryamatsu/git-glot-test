@@ -126,6 +126,8 @@ class BotAlgorithms {
         if (this.createFeatureBranch) {
             const userBranch = `branch-${Math.random()}`
 
+            console.log("-- CREATE USER BRANCH --");// testing
+
             const existingBranches = execSync("git branch --list", { encoding: 'utf-8' });
             const hasDuplicateBranch = existingBranches.split("\n").some(branch => branch.trim() === userBranch);
 
@@ -134,6 +136,7 @@ class BotAlgorithms {
             }
 
             if (this.switchToFeatureBranch) {
+                console.log("-- SWITCH TO USER BRANCH --");// testing
                 execSync(`git switch ${userBranch}`);
             }
             else {
@@ -148,15 +151,18 @@ class BotAlgorithms {
 
         // edit pretend files as automated user
         for (let i = 1; i <= userCommitCount; i++) {
+
             for (let i = 0; i < this.fileNameList.length; i++) {
                 this.botEditFile(this.fileNameList[i], this.lineEditIndexList[i]);
                     if (this.stageUserChanges && !(this.addUnstagedChangesAfterUserCommit && i === userCommitCount)) {
                         execSync(`git add ${this.folderName}/${this.fileNameList[i]}`);
+                        console.log(`-- ADD CHANGES ${i} --`);// testing
                     }
             }
         
             if (this.commitUserChanges && !((this.addStagedChangesAfterUserCommit || this.addUnstagedChangesAfterUserCommit) && i === userCommitCount)) {
                 execSync(`git commit -m "edit files"`);
+                console.log(`-- MAKE COMMIT ${i} --`);// testing
             }
         }
         

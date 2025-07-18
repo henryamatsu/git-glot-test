@@ -1,0 +1,79 @@
+[
+  {
+    "number": 0,
+    "instructions": "You have multiple commits that have yet to be pushed to the remote repo. Try to squash them all into a single commit using the git rebase -i command before pushing. (only make multiple commits in scenarios that require it)"
+  },
+  {
+    "number": 1,
+    "instructions": "Use git blame to find who last modified a specific line in a file."
+  },
+  {
+    "number": 2,
+    "instructions": "You’ve made some changes to the working directory, but you forgot to switch from main to a feature branch. Create and switch to the new branch using git branch and git switch, and carry over the changes (try to do it with the git stash command)."
+  },
+  {
+    "number": 3,
+    "instructions": "You’ve made some changes to the working directory, but you forgot to switch from main to a feature branch. Create and switch to the new branch using git branch and git switch, and carry over the changes (try to do it without the stash command)."
+  },
+  {
+    "number": 4,
+    "instructions": "Merge your feature branch with main within your text editor using the git merge command and push from main."
+  },
+  {
+    "number": 5,
+    "instructions": "Merge your feature branch with main within your text editor using the git rebase command and push from main."
+  },
+  {
+    "number": 6,
+    "instructions": "Merge your feature branch with main on Github using the rebase option."
+  },
+  {
+    "number": 7,
+    "instructions": "Merge your feature branch with main on Github using other merge styles."
+  },
+  {
+    "number": 8,
+    "instructions": "Compare your feature branch with main using the git diff command."
+  },
+  {
+    "number": 9,
+    "instructions": "You have multiple commits that have yet to be pushed to the remote repo. Try to revert to your second most recent commit using the git reset command before pushing."
+  },
+  {
+    "number": 10,
+    "instructions": "You have multiple commits that have yet to be pushed to the remote repo. Try to revert to your second most recent commit using the git revert command before pushing."
+  },
+  {
+    "number": 11,
+    "instructions": "You have a few unstaged changes in your working directory, add them to your previous commit before pushing."
+  },
+  {
+    "number": 12,
+    "instructions": "You have a few unstaged changes in your working directory, get rid of them using the git restore command before pushing."
+  },
+  {
+    "number": 13,
+    "instructions": "Merge the latest version of main into your feature branch so you can deal with merge conflicts in your text editor before pushing."
+  },
+  {
+    "number": 14,
+    "instructions": "Use git log --graph to visualize commit history with branches."
+  },
+  {
+    "number": 15,
+    "instructions": "You’ve made a commit to your local repo, but you forgot to switch from main to a feature branch. Create and switch to the new branch using git branch, and then use git reset to remove the commit from main."
+  },
+  {
+    "number": 16,
+    "instructions": "You’ve staged some new changes, but you forgot to switch from main to a feature branch. Create and switch to the new branch using git branch and git switch, and carry over the changes."
+  },
+  {
+    "number": 17,
+    "instructions": "You have a few staged changes in your working directory, get rid of them using the git restore command before pushing."
+  },
+  {
+    "number": 18,
+    "instructions": "You’ve created a branch to work on a new feature, but you forgot to actually switch to it before making your commits. Switch to the new branch using git switch, and use git cherry-pick to move over your latest commits. You should also use git reset to remove the commits from main."
+  }
+]
+

@@ -152,11 +152,11 @@ class BotAlgorithms {
         // edit pretend files as automated user
         for (let i = 1; i <= userCommitCount; i++) {
 
-            for (let i = 0; i < this.fileNameList.length; i++) {
-                this.botEditFile(this.fileNameList[i], this.lineEditIndexList[i]);
+            for (let j = 0; j < this.fileNameList.length; j++) {
+                this.botEditFile(this.fileNameList[j], this.lineEditIndexList[j]);
                     if (this.stageUserChanges && !(this.addUnstagedChangesAfterUserCommit && i === userCommitCount)) {
-                        execSync(`git add ${this.folderName}/${this.fileNameList[i]}`);
-                        console.log(`-- ADD CHANGES ${i} --`);// testing
+                        execSync(`git add ${this.folderName}/${this.fileNameList[j]}`);
+                        console.log(`-- ADD CHANGES ON file${j}.txt FOR COMMIT ${i} --`);// testing
                     }
             }
         
